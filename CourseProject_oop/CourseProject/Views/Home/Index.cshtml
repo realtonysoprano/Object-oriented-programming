@@ -1,0 +1,17 @@
+﻿@model HomeViewModel
+<p>&nbsp;</p>
+<!-- html шаблон для главной страницы-->
+<h1>Самые продаваемые варианты</h1>
+<div class="row mt-5 mb-2">
+	@{
+		foreach (var window in Model.favWindows)
+		{
+			<div class="col-lg-4">
+				<img class="img-thumbnail" src="@window.img" alt="@window.name" />
+				<h2>@window.name</h2>
+				<p>Цена: @window.price.ToString("c")</p>
+			</div>
+		}
+	}
+</div>
+
